@@ -1,0 +1,30 @@
+.container{
+    align-items: center;
+    display:flex;
+    margin:auto;
+    flex-direction: column;
+    width: 40%;
+    height: 40rem;
+    background-color:rgba(0, 0, 128, 1);
+    justify-content: center;
+    mix-blend-mode: normal;
+    border-radius: 40px;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.h1{
+    mix-blend-mode: normal;
+    border-radius: 20px;
+}
+
+.container{
+    text-align: center;
+    padding-top: auto;
+}
