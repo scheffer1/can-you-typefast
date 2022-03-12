@@ -1,3 +1,7 @@
+body{
+  background-color: darkgray !important;
+}
+
 .container{
     align-items: center;
     display:flex;
