@@ -11,8 +11,6 @@ var hit = 0;
 var letterTyped = 0;
 var wordTyped = 1;
 
-    getRandomWord();
-
 let word = document.getElementById('word').innerText;
 
 function getRandomWord(){
@@ -33,7 +31,8 @@ window.startTimer = startTimer
 window.checkWord = checkWord
 
 function startTimer(){
-    var sec = 15;
+    getRandomWord();
+    var sec = 30;
     hit, letterTyped, wordTyped = 0;
     document.getElementById('img').classList.add('hidden')
     document.getElementById('button').classList.add('hidden');
@@ -64,6 +63,7 @@ function endTimer(){
 function resetInfo(){
     prec.textContent = "Precision  0%";
     wpm.textContent = "WPM = 0";
+    prog.value = 0;
 }
 
 function calculateInfo(){

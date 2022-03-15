@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <title>Speed test</title>
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "img/Can_you_type_fast.png">
 </head>
+
 <body>
     <div class="box is-mobile block">
-        <img src="img/Can_you_type_fast.png" id="img"class="block" alt="">
+        <img src="img/Can_you_type_fast.png" id="img" class="block" alt="">
         <br>
-        <button onclick="startTimer()" id="button" class="button start is-responsive is-large is-success is-8 block">Start</button>
+        <button onclick="startTimer()" id="button"
+            class="button start is-responsive is-large is-success is-8 block">Start</button>
         <h1 class="title is-3 block hidden" id="finaltext">Congratulations!</h1>
-        <button onclick="startTimer()" class="button start is-responsive is-large is-success is-8 block hidden" id="finalbutton">Restart game</button>
+        <button onclick="startTimer()" class="button start is-responsive is-large is-success is-8 block hidden"
+            id="finalbutton">Restart game</button>
         <div class="typetest block hidden" id="end">
             <h1 class="h1" id="word" style="text-transform: uppercase;"></h1>
-            <input  class="input" id="input" type="text"  name="input" onkeyup="checkWord()" style="text-transform: uppercase;">
+            <input class="input" id="input" type="text" name="input" onkeyup="checkWord()"
+                style="text-transform: uppercase;">
         </div>
         <div class="box info hidden" id="info">
             <progress class="progress is-info" id="prog" value="0" max="100"></progress>
@@ -26,8 +33,8 @@
             <h1 id="prec" class="title is-3"></h1>
             <h1 id="wpm" class="title is-3"></h1>
         </div>
-        
     </div>
 </body>
 <script src="js/typetest.js" type="module"></script>
+
 </html>
