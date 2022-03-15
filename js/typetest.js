@@ -29,17 +29,21 @@ function isCorrect(condition){
     }
 }
 
-var sec = 30;
-
 window.startTimer = startTimer
 window.checkWord = checkWord
- function startTimer(){
+
+function startTimer(){
+    var sec = 15;
+    hit, letterTyped, wordTyped = 0;
     document.getElementById('img').classList.add('hidden')
     document.getElementById('button').classList.add('hidden');
     document.getElementById('end').classList.remove('hidden');
     document.getElementById('info').classList.remove('hidden');
+    document.getElementById('finaltext').classList.add('hidden');
+    document.getElementById('finalbutton').classList.add('hidden');
+    resetInfo();
     var x =  setInterval(function(){
-        seconds.textContent = sec
+        seconds.textContent = sec+" seconds remaining"
         prog.value += 3.23;
         sec--;
         if(sec < 0){
@@ -50,10 +54,16 @@ window.checkWord = checkWord
 }
 
 function endTimer(){
-    var decimal = wordTyped/60
+    var decimal = wordTyped;
     wpm.textContent = `WPM = ${Math.round(decimal * 100) / 100}`;
     document.getElementById('end').classList.add('hidden');
-    document.getElementById('endcon').classList.remove('hidden');
+    document.getElementById('finaltext').classList.remove('hidden');
+    document.getElementById('finalbutton').classList.remove('hidden');
+}
+
+function resetInfo(){
+    prec.textContent = "Precision  0%";
+    wpm.textContent = "WPM = 0";
 }
 
 function calculateInfo(){

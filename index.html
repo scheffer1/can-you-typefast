@@ -14,9 +14,9 @@
         <img src="img/Can_you_type_fast.png" id="img"class="block" alt="">
         <br>
         <button onclick="startTimer()" id="button" class="button start is-responsive is-large is-success is-8 block">Start</button>
-        
+        <h1 class="title is-3 block hidden" id="finaltext">Congratulations!</h1>
+        <button onclick="startTimer()" class="button start is-responsive is-large is-success is-8 block hidden" id="finalbutton">Restart game</button>
         <div class="typetest block hidden" id="end">
-            <h1 class="hidden title is-3 block" id="endcon">Congratulations!</h1>
             <h1 class="h1" id="word" style="text-transform: uppercase;"></h1>
             <input  class="input" id="input" type="text"  name="input" onkeyup="checkWord()" style="text-transform: uppercase;">
         </div>
