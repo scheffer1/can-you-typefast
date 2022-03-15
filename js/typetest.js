@@ -7,9 +7,9 @@ let prog = document.getElementById('prog');
 let wpm = document.getElementById('wpm');
 let prec = document.getElementById('prec');
 var correct = false;
-var hit = 1;
-var letterTyped = 1;
-var wordType = 1;
+var hit = 0;
+var letterTyped = 0;
+var wordTyped = 1;
 
     getRandomWord();
 
@@ -43,18 +43,24 @@ window.checkWord = checkWord
         prog.value += 3.23;
         sec--;
         if(sec < 0){
+            endTimer();
             clearInterval(x);
         }
     },1000)
 }
 
+function endTimer(){
+    var decimal = wordTyped/60
+    wpm.textContent = `WPM = ${Math.round(decimal * 100) / 100}`;
+    document.getElementById('end').classList.add('hidden');
+}
+
 function calculateInfo(){
-    prec.textContent = Math.round(hit*100/letterTyped) +"%"
+    prec.textContent = "Precision "+Math.round(hit*100/letterTyped) +"%"
 }
 
 function checkWord(){
     if(inputTemp.value != ''){
-        console.log(letterTyped)
         letterTyped++;
     }
     
@@ -70,6 +76,8 @@ function checkWord(){
         isCorrect('no');
     }
     if(input.length == word.length && correct){
+        wordTyped++;
+        console.log(wordTyped)
         inputTemp.value = '';
         getRandomWord();
         word = document.getElementById('word').innerText;
