@@ -1,26 +1,39 @@
-body{
-  background-color: darkgray !important;
+body html{
+    background-color: rgb(65, 57, 57) !important;
+    min-height:100%
 }
 
-.container{
+.box{
+    text-align: center;
+    margin-top: 7rem;
+    margin-inline: auto;
+    max-width: 60%;
     align-items: center;
-    display:flex;
-    margin:auto;
-    flex-direction: column;
-    width: 40%;
-    height: 40rem;
-    background-color:rgba(0, 0, 128, 1);
     justify-content: center;
-    mix-blend-mode: normal;
-    border-radius: 40px;
+    flex-direction: column;
+    display: flex;
+}
+
+.info{
+    flex-direction: row !important;
+    text-align: center;
+}
+
+.input{
+   width: auto !important;
+}
+
+.progress{
+    max-width: 50% !important;
+    margin-left: 25%;
 }
 
 .red{
-    background-color: red;
+    color: red;
 }
 
 .green{
-    background-color: green;
+    color: green;
 }
 
 .h1{
@@ -31,4 +44,24 @@ body{
 .container{
     text-align: center;
     padding-top: auto;
+}
+
+.hidden{
+    display: none !important;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+}
+
+.hidden:active{
+    opacity: 1;
+    display: block;
+}
+
+button{
+    border: 1px solid !important;
+}
+
+button:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color: black !important;
 }
