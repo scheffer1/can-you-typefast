@@ -53,6 +53,7 @@ function endTimer(){
     var decimal = wordTyped/60
     wpm.textContent = `WPM = ${Math.round(decimal * 100) / 100}`;
     document.getElementById('end').classList.add('hidden');
+    document.getElementById('endcon').classList.remove('hidden');
 }
 
 function calculateInfo(){
