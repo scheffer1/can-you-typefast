@@ -34,10 +34,6 @@ function isCorrect(condition) {
             document.getElementById('word').classList.remove('red');
             break;
     }
-        
-    
-        
-    
 }
 
 window.startTimer = startTimer
